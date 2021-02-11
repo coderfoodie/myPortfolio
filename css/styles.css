@@ -1,0 +1,27 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --skin-color: #FB839E;
+}
+
+:root {
+  --skin-color: #EC9412;
+}
+
+:root {
+  --skin-color: #1FC586;
+}
+
+:root {
+  --skin-color: #2EB1ED;
+}
+
+:root {
+  --skin-color: #CC3A3B;
+}
+/*# sourceMappingURL=styles.css.map */

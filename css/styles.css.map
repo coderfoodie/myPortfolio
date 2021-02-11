@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,EAAE,CAAC,AAAA,OAAO,EAAE,CAAC,AAAA,QAAQ,CAAA;EAClB,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;AGJD,AAAA,KAAK,CAAA;EACD,YAAY,CAAA,QAAC;CAChB;;ACFD,AAAA,KAAK,CAAA;EACD,YAAY,CAAA,QAAC;CAChB;;ACFD,AAAA,KAAK,CAAA;EACD,YAAY,CAAA,QAAC;CAChB;;ACFD,AAAA,KAAK,CAAA;EACJ,YAAY,CAAA,QAAC;CACb;;ACFD,AAAA,KAAK,CAAA;EACJ,YAAY,CAAA,QAAC;CACb",
+    "sources": [
+        "styles.scss",
+        "_base.scss",
+        "_responsive.scss",
+        "_styles-switcher.scss",
+        "skins/_color-1.scss",
+        "skins/_color-2.scss",
+        "skins/_color-3.scss",
+        "skins/_color-4.scss",
+        "skins/_color-5.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
