@@ -117,11 +117,11 @@ img {
 }
 
 .header .hamburger-btn span::before {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .header .hamburger-btn span::after {
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 :root {
