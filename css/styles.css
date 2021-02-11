@@ -1,27 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --outer-shadow: 3px 3px 3px #D0D0D0, -3px -3px -3px #FAFAFA;
+  --outer-shadow-0: 0 0 0 #D0D0D0, 0 0 0 #FAFAFA;
+  --innershadow: inset 3px 3px 3px #D0D0D0, inset -3px -3px -3px #FAFAFA;
+}
+
+*:not(i) {
+  font-family: 'Raleway', sans-serif;
+  font-size: 400;
+}
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.outer-shadow {
+  -webkit-box-shadow: var(--outer-shadow);
+          box-shadow: var(--outer-shadow);
+}
+
+.header {
+  padding: 20px 15px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.header .logo a {
+  display: inline-block;
+  padding-top: 3px;
+  text-align: center;
+  line-height: 30px;
+  height: 40px;
+  width: 40px;
+  font-size: 24px;
+  color: var(--skin-color);
+  border: 2px solid var(--skin-color);
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.header .hamburger-btn {
+  display: block;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .hamburger-btn span {
+  margin-top: -15px;
+  height: 2px;
+  width: 16px;
+  background: #000;
+  position: absolute;
+}
+
+.header .hamburger-btn span::after,
+.header .hamburger-btn span::before {
+  content: '';
+  display: block;
+  position: relative;
+  height: 2px;
+  background: #000;
+}
+
+.header .hamburger-btn span::before {
+  margin-top: 8px;
+}
+
+.header .hamburger-btn span::after {
+  margin-top: 6px;
 }
 
 :root {
   --skin-color: #FB839E;
-}
-
-:root {
-  --skin-color: #EC9412;
-}
-
-:root {
-  --skin-color: #1FC586;
-}
-
-:root {
-  --skin-color: #2EB1ED;
-}
-
-:root {
-  --skin-color: #CC3A3B;
 }
 /*# sourceMappingURL=styles.css.map */

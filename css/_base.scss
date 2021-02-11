@@ -1,5 +1,94 @@
+// variables
+:root{
+    --outer-shadow: 3px 3px 3px #D0D0D0, -3px -3px -3px #FAFAFA;
+    --outer-shadow-0: 0 0 0 #D0D0D0, 0 0 0 #FAFAFA;
+    --innershadow: inset 3px 3px 3px #D0D0D0, inset -3px -3px -3px #FAFAFA;
+}
+
+$bg-black-900: #000;
+$bg-black-100: #DDD;
+$bg-black-50: #EFF;
+$text-block-900: #000;
+$text-block-700: #555;
+$text-block-600: #666666;
+$text-block-300: #BBB;
+
+// base
+*:not(i){font-family: 'Raleway', sans-serif;font-size: 400;}
+
 *, *::after, *::before{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: none;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    // background: $bg-black-50;
+}
+
+a{text-decoration: none;}
+ul{list-style: none;}
+img{vertical-align: middle;max-width: 100%;}
+.container{max-width: 1140px;margin: auto;}
+.row{display: flex;flex-wrap: wrap;}
+.justify-content-between{justify-content: space-between;}
+.outer-shadow{box-shadow: var(--outer-shadow);}
+// header
+
+.header{
+    // background: #444;
+    padding: 20px 15px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    .logo a{
+        display: inline-block;
+        padding-top: 3px;
+        text-align: center;
+        line-height: 30px;
+        height: 40px;
+        width: 40px;
+        font-size: 24px;
+        color: var(--skin-color);
+        border: 2px solid var(--skin-color);
+        border-radius: 50%;
+        font-weight: 800;
+        // text-transform: uppercase;
+    }
+
+    .hamburger-btn{
+        display: block;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger-btn span{
+        margin-top: -15px;
+        height: 2px;
+        width: 16px;
+        background: $bg-black-900;
+        position: absolute;
+    }
+
+    .hamburger-btn span::after,
+    .hamburger-btn span::before{
+        content: '';
+        display: block;
+        position: relative;
+        height: 2px;
+        background: $bg-black-900;
+    }
+
+    .hamburger-btn span::before{margin-top: 8px;}
+    .hamburger-btn span::after{margin-top: 6px;}
 }
