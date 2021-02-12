@@ -347,10 +347,7 @@ img{vertical-align: middle;max-width: 100%;}
 .home-section{
     .wrap-effect{position: relative;}
 
-    .full-screen{
-        padding: 50px 0;
-        min-height: 100vh;
-    }
+    .full-screen{padding: 50px 0;min-height: 100vh;}
 
     .home-text,
     .home-img{
@@ -397,15 +394,11 @@ img{vertical-align: middle;max-width: 100%;}
 // about me section
 
 .about-section{
-    padding: 80px 0 80px;
+    padding: 80px 0 0;
     min-height: 100vh;
 
 
-    .about-img{
-        flex: 0 0 40%;
-        max-width: 40%;
-        padding: 0 15px;
-    }
+    .about-img{flex: 0 0 40%;max-width: 40%;padding: 0 15px;}
 
     .about-img .img-box{padding: 15px;border-radius: 5px;}
 
@@ -415,10 +408,7 @@ img{vertical-align: middle;max-width: 100%;}
         border-radius: 5px;
     }
 
-    .about-img .social-links{
-        margin: 20px;
-        text-align: center;
-    }
+    .about-img .social-links{margin: 20px;text-align: center;}
 
     .about-img .social-links a{
         text-align: center;
@@ -456,7 +446,169 @@ img{vertical-align: middle;max-width: 100%;}
     .about-info a{@extend .hover-in-shadow;}
     .about-info span{font-weight: 600;}
 
-    .about-info .btn-1{
-        margin: 30px 20px 0 0;
+    .about-info .btn-1{margin: 30px 20px 0 0;}
+
+    .about-tabs{
+        padding: 60px 15px 50px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
     }
+    .about-tabs .tab-item{
+        display: inline-block;
+        margin: 0 5px 10px;
+        padding: 5px 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.7s ease;
+        font-size: 1rem;
+        color: $text-block-600;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .about-tabs .tab-item:hover:not(.active){opacity: 0.6;}
+    .about-tabs .tab-item.active{color: var(--skin-color);}
+
+    .tab-content{flex: 0 0 100%;max-width: 100%;display: none;}
+    .tab-content.active{
+        display: block;
+    }
+
+    .skills{padding: 0 0 40px;}
+
+    .skills .skill-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .skills .skill-item p{
+        font-size: 16px;
+        color: $text-block-600;
+        text-transform: capitalize;
+        margin: 0 0 10px;
+    }
+
+    .skills .skill-item .progress{
+        height: 20px;
+        border-radius: 10px;
+        position: relative;
+    }
+    .skills .skill-item .progress-bar{
+        background: $text-block-600;
+        height: 6px;
+        left: 7px;
+        top: 7px;
+        position: absolute;
+        border-radius: 10px;
+    }
+    .skills .skill-item .progress-bar span{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: $text-block-600;
+        margin-top: -40px;
+    }
+    
+    .education{margin-top: 50px;}
+
+    .education,
+    .experience{padding-bottom: 0 0 80px;}
+
+    .timeline{
+        flex: 0 0 100%;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .timeline::before{
+        content: '';
+        width: 1px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        position: absolute;
+        background: $bg-black-100;
+    }
+
+    .timeline .timeline-item{flex: 0 0 100%;max-width: 100%;padding: 0 15px;}
+
+    .timeline .timeline-item:nth-child(odd){padding-right: calc(50% + 50px);text-align: right;}
+
+    .timeline .timeline-item:nth-child(even){
+        padding-left: calc(50% + 50px);
+        
+    }
+
+    .timeline .timeline-item-inner{
+        padding: 30px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .timeline .timeline-item-inner::before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background: $bg-black-100;
+        top: 37px;
+        z-index: -1;
+    }
+
+    .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before{
+        right: -30px;
+    }
+    .timeline .timeline-item:nth-child(even) .timeline-item-inner::before{
+        left: -30px;
+    }
+
+    .timeline .timeline-item-inner .icon{
+        height: 40px;
+        width: 40px;
+        background: $bg-black-50;
+        border: 1px solid $bg-black-100;
+        border-radius: 50%;
+        font-size: 16px;
+        text-align: center;
+        line-height: 40px;
+        position: absolute;
+        color: var(--skin-color);
+        top: 20px;
+    }
+
+    .timeline .timeline-item:nth-child(odd) .icon{right: -70px;}
+
+    .timeline .timeline-item:nth-child(even) .icon{left: -70px;}
+
+    .timeline .timeline-item-inner span{
+        font-weight: 500;
+        color: var(--skin-color);
+        display: block;
+        margin: 0 0 10px;
+        text-transform: capitalize;
+    }
+    .timeline .timeline-item-inner h3{
+        font-size: 20px;
+        color: $text-block-700;
+        font-weight: 700;
+        margin: 0 0 5px;
+        text-transform: capitalize;
+    }
+    .timeline .timeline-item-inner h4{
+        font-size: 16px;
+        font-style: italic;
+        color: $text-block-600;
+        margin: 0;
+    }
+    .timeline .timeline-item-inner p{
+        font-size: 16px;
+        color: $text-block-600;
+        line-height: 26px;
+        margin: 15px 0 0;
+    }
+
 }
