@@ -275,6 +275,32 @@ img {
   }
 }
 
+@-webkit-keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .section-title {
   padding: 0 15px;
   -webkit-box-flex: 0;
@@ -637,6 +663,8 @@ img {
 
 .about-section .tab-content.active {
   display: block;
+  -webkit-animation: fadeInTop 0.7s ease;
+          animation: fadeInTop 0.7s ease;
 }
 
 .about-section .skills {

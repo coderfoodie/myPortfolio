@@ -176,6 +176,17 @@ img{vertical-align: middle;max-width: 100%;}
     }
 }
 
+@keyframes fadeInTop{
+    0%{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .section-title{
     padding: 0 15px;
     flex: 0 0 100%;
@@ -472,6 +483,7 @@ img{vertical-align: middle;max-width: 100%;}
     .tab-content{flex: 0 0 100%;max-width: 100%;display: none;}
     .tab-content.active{
         display: block;
+        animation: fadeInTop 0.7s ease;
     }
 
     .skills{padding: 0 0 40px;}
