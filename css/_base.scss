@@ -4,6 +4,7 @@
     --outer-shadow: 3px 3px 5px #D0D0D0, -3px -3px 3px #FAFAFA;
     --outer-shadow-0: 0 0 0 #D0D0D0, 0 0 0 #FAFAFA;
     --inner-shadow: inset 3px 3px 3px #D0D0D0, inset -3px -3px 3px #FAFAFA;
+    --inner-shadow-0: inset 0 0 0 #D0D0D0, inset 0 0 0 #FAFAFA;
 }
 
 $bg-black-900: #000;
@@ -622,5 +623,88 @@ img{vertical-align: middle;max-width: 100%;}
         line-height: 26px;
         margin: 15px 0 0;
     }
-
 }
+
+// services
+
+.services-section{
+    // background: red;
+    padding: 80px 0 80px;
+
+    .service-item{
+        display: flex;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .service-item-inner{
+        padding: 50px 15px;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .service-item-inner .icon{
+        display: block;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        margin: 0 auto 30px;
+        position: relative;
+    }
+
+    .service-item-inner .icon::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .service-item-inner:hover .icon{
+        box-shadow: var(--inner-shadow-0);
+    }
+
+    .service-item-inner:hover .icon::after{
+        box-shadow: var(--outer-shadow);
+    }
+
+    .service-item-inner .icon i{
+        font-size: 25px;
+        text-align: center;
+        transition: all 0.3s ease;
+        line-height: 60px;
+    }
+
+    .service-item-inner:hover .icon i{color: var(--skin-color);}
+
+    .service-item-inner h3{
+        font-size: 20px;
+        font-weight: 600;
+        color: $text-block-700;
+        margin: 0 0 10px;
+        text-transform: capitalize;
+    }
+
+    .service-item-inner p{
+        font-size: 16px;
+        color: $text-block-600;
+        line-height: 25px;
+    }
+}
+
+
+// portfolio
+
+// testimonial
+
+// contact
+
+// footer

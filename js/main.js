@@ -14,8 +14,7 @@
             // deactivate existing active 'tab-content;
             aboutSect.querySelector(".tab-content.active").classList.remove("active");
             //  activate new tab-content
-            aboutSect.querySelector(target).classList.add("active")
-
+            aboutSect.querySelector(target).classList.add("active");
         }
     });
 })();

@@ -3,6 +3,7 @@
   --outer-shadow: 3px 3px 5px #D0D0D0, -3px -3px 3px #FAFAFA;
   --outer-shadow-0: 0 0 0 #D0D0D0, 0 0 0 #FAFAFA;
   --inner-shadow: inset 3px 3px 3px #D0D0D0, inset -3px -3px 3px #FAFAFA;
+  --inner-shadow-0: inset 0 0 0 #D0D0D0, inset 0 0 0 #FAFAFA;
 }
 
 *:not(i) {
@@ -830,6 +831,90 @@ img {
   color: #666666;
   line-height: 26px;
   margin: 15px 0 0;
+}
+
+.services-section {
+  padding: 80px 0 80px;
+}
+
+.services-section .service-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.services-section .service-item-inner {
+  padding: 50px 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.services-section .service-item-inner .icon {
+  display: block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 0 auto 30px;
+  position: relative;
+}
+
+.services-section .service-item-inner .icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.services-section .service-item-inner:hover .icon {
+  -webkit-box-shadow: var(--inner-shadow-0);
+          box-shadow: var(--inner-shadow-0);
+}
+
+.services-section .service-item-inner:hover .icon::after {
+  -webkit-box-shadow: var(--outer-shadow);
+          box-shadow: var(--outer-shadow);
+}
+
+.services-section .service-item-inner .icon i {
+  font-size: 25px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 60px;
+}
+
+.services-section .service-item-inner:hover .icon i {
+  color: var(--skin-color);
+}
+
+.services-section .service-item-inner h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+}
+
+.services-section .service-item-inner p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 25px;
 }
 
 :root {
