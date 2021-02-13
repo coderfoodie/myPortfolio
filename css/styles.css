@@ -24,6 +24,7 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background: #EFF0F4;
+  overflow-y: hidden;
 }
 
 a {
@@ -1024,6 +1025,221 @@ img {
   margin: 10px 0 0;
   color: #666666;
   text-transform: capitalize;
+}
+
+.portfolio-popup {
+  background: #EFF0F4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.portfolio-popup .pp-details {
+  max-width: 1350px;
+  width: calc(85% + 40px);
+  margin: auto;
+}
+
+.portfolio-popup .pp-details-inner {
+  padding: 30px 0;
+}
+
+.portfolio-popup .separator {
+  height: 3px;
+  width: 100%;
+  background: #DDD;
+  display: block;
+}
+
+.portfolio-popup .pp-title {
+  padding: 0 15px;
+}
+
+.portfolio-popup .pp-title h2 {
+  font-size: 28px;
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+
+.portfolio-popup .pp-title p {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #666666;
+  margin: 0 0 15px;
+  border-bottom: 2px solid #DDD;
+  padding-bottom: 10px;
+}
+
+.portfolio-popup .pp-project-details h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 15px;
+  text-transform: capitalize;
+}
+
+.portfolio-popup .description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
+  max-width: 65%;
+  padding: 0 15px;
+}
+
+.portfolio-popup .description p {
+  font-size: 15px;
+  color: #666666;
+  line-height: 25px;
+}
+
+.portfolio-popup .info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  max-width: 35%;
+  padding: 0 15px;
+}
+
+.portfolio-popup .info ul li {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #666666;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.portfolio-popup .info ul li:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-popup .pp-img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.portfolio-popup .pp-main {
+  min-height: 100vh;
+  max-width: 1350px;
+  width: 85%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio-popup .pp-main-inner {
+  padding: 70px 0 50px;
+  position: relative;
+}
+
+.portfolio-popup .pp-project-details-btn {
+  position: absolute;
+  border-radius: 30px;
+  left: 0;
+  top: 15px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--skin-color);
+  padding: 0 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.portfolio-popup .pp-project-details-btn::after {
+  border-radius: 30px;
+}
+
+.portfolio-popup .pp-project-details-btn i {
+  margin-left: 4px;
+}
+
+.portfolio-popup .pp-close {
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  top: 15px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 35px;
+  color: #666666;
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.portfolio-popup .pp-close::after {
+  border-radius: 50%;
+}
+
+.portfolio-popup .pp-counter {
+  position: absolute;
+  right: 0;
+  height: 40px;
+  line-height: 40px;
+  bottom: 5px;
+  font-size: 16px;
+  color: #666666;
+}
+
+.portfolio-popup .pp-prev,
+.portfolio-popup .pp-next {
+  position: fixed;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1100;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.portfolio-popup .pp-prev:hover,
+.portfolio-popup .pp-next:hover {
+  opacity: 1;
+}
+
+.portfolio-popup .pp-prev i,
+.portfolio-popup .pp-next i {
+  line-height: 40px;
+}
+
+.portfolio-popup .pp-prev i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.portfolio-popup .pp-prev {
+  left: 15px;
+}
+
+.portfolio-popup .pp-next {
+  right: 15px;
 }
 
 :root {
