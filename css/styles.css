@@ -917,6 +917,115 @@ img {
   line-height: 25px;
 }
 
+.portfolio-section {
+  padding: 80px 0 80px;
+  min-width: 100vh;
+}
+
+.portfolio-section .section-title {
+  margin-bottom: 40px;
+}
+
+.portfolio-section .portfolio-filter {
+  padding: 0 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.portfolio-section .filter-item {
+  display: inline-block;
+  margin: 0 5 10px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #666666;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.portfolio-section .filter-item:hover:not(.active) {
+  opacity: 0.6;
+}
+
+.portfolio-section .filter-item.active {
+  color: var(--skin-color);
+}
+
+.portfolio-section .portfolio-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio-section .portfolio-item-inner {
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.portfolio-section .portfolio-item-img img {
+  border-radius: 5px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.portfolio-section .portfolio-item-inner:hover .portfolio-item-img img {
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+.portfolio-section .portfolio-item-img {
+  position: relative;
+}
+
+.portfolio-section .portfolio-item-img .view-project {
+  text-transform: capitalize;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--skin-color);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: -4px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  z-index: -1;
+  opacity: 0;
+}
+
+.portfolio-section .portfolio-item-inner:hover .view-project {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.portfolio-section .portfolio-item-details {
+  display: none;
+}
+
+.portfolio-section .portfolio-item-inner p {
+  font-size: 16px;
+  margin: 10px 0 0;
+  color: #666666;
+  text-transform: capitalize;
+}
+
 :root {
   --skin-color: #FB839E;
 }
