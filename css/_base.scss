@@ -30,7 +30,7 @@ body{
     line-height: 1.5;
     overflow-x: hidden;
     background: $bg-black-50;
-    overflow-y: hidden;
+    // overflow-y: hidden;
 }
 
 a{text-decoration: none;}
@@ -804,11 +804,16 @@ img{vertical-align: middle;max-width: 100%;}
     height: 100%;
     z-index: 1000;
     overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
 
     .pp-details{
         max-width: 1350px;
         width: calc(85% + 40px);
         margin: auto;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
     }
 
     .pp-details-inner{
@@ -839,6 +844,8 @@ img{vertical-align: middle;max-width: 100%;}
         border-bottom: 2px solid $bg-black-100;
         padding-bottom: 10px;
     }
+
+    .pp-title p span{font-weight: 400;}
 
     .pp-project-details h3{
         font-size: 20px;
@@ -875,6 +882,10 @@ img{vertical-align: middle;max-width: 100%;}
         text-transform: capitalize;
 
         &:last-child{margin-bottom: 0;}
+    }
+
+    .info ul li span{
+        font-weight: 400;
     }
 
     .pp-img{

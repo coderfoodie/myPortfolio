@@ -22,8 +22,31 @@
 // services 
 
 
-// portfolio
+// portfolio filter and popup
+(() =>{
+    const filterCont = document.querySelector(".portfolio-filter"),
+    portfolioItemsCont = document.querySelector(".portfolio-items"),
+    portfolioItems = document.querySelector(".portfolio-item"),
+    popup = document.querySelector(".portfolio-popup"),
+    prevBtn = popup.querySelector(".pp-prev"),
+    nextBtn = popup.querySelector(".pp-next"),
+    closeBtn = popup.querySelector(".pp-close"),
+    projectDetailsCont = popup.querySelector(".pp-details"),
+    projectDetailsBtn = popup.querySelector(".pp-project-details-btn");
+    let itemIndex, slideIndex, screenshots;
+    
+    // filter portfolio items
+    filterCont.addEventListener("click", (event) => {
+        if (e.target.classList.contains("filter-item") && 
+        !event.target.classList.contains("active")) {
+            console.log("true");
+        }
+        else{
+            console.log("false");
+        }
+    })
 
+});
 
 
 // testimonial
