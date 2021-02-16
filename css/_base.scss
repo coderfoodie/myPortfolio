@@ -658,7 +658,9 @@ img{vertical-align: middle;max-width: 100%;}
     }
 
     .service-item-inner .icon{
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 60px;
         width: 60px;
         text-align: center;
@@ -687,14 +689,15 @@ img{vertical-align: middle;max-width: 100%;}
         box-shadow: var(--outer-shadow);
     }
 
-    .service-item-inner .icon i{
-        font-size: 25px;
+    .service-item-inner .icon svg{
+        width: 25px;
+        height: 25px;
         text-align: center;
         transition: all 0.3s ease;
         line-height: 60px;
     }
 
-    .service-item-inner:hover .icon i{color: var(--skin-color);}
+    .service-item-inner:hover .icon svg g{fill: var(--skin-color);}
 
     .service-item-inner h3{
         font-size: 20px;
