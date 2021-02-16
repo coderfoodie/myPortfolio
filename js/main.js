@@ -48,6 +48,7 @@
             const target = e.target.getAttribute("data-target");
             portfolioItems.forEach((item) => {
                 console.log(item);
+                console.log(item);
             });
         }
     });
