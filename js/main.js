@@ -25,7 +25,6 @@
 
 // portfolio filter and popup
 (() => {
-    console.log('hey');
     const filterCont = document.querySelector(".portfolio-filter"),
     portfolioItemsCont = document.querySelector(".portfolio-items"),
     portfolioItems = document.querySelector(".portfolio-item"),
@@ -42,10 +41,14 @@
     filterCont.addEventListener("click", (e) => {
         if (e.target.classList.contains("filter-item") && 
         !e.target.classList.contains("active")) {
-            console.log("true");
-        }
-        else{
-            console.log("false");
+            // deactivate current active
+            filterCont.querySelector(".active").classList.remove("outer-shadow", "active");
+            // activate new filter
+            e.target.classList.add("active", "outer-shadow");
+            const target = e.target.getAttribute("data-target");
+            portfolioItems.forEach((item) => {
+                console.log(item);
+            });
         }
     });
 })();
