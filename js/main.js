@@ -57,6 +57,16 @@
         }
     })
 
+    portolioItemsCont.addEventListener("click", (e) => {
+        if (e.target.closest(".portfolio-item-inner")) {
+            const portfolioItem = e.target.closest(".portfolio-item-inner").parentElement
+            // get the portfolio item index
+            itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem)
+            console.log(itemIndex);
+        }
+
+    })
+
 })();
 
 // testimonial
