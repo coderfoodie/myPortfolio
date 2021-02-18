@@ -25,40 +25,39 @@
 
 // portfolio filter and popup
 (() => {
-    const filterCont = document.querySelector(".portfolio-filter"),
-    portfolioItemsCont = document.querySelector(".portfolio-items"),
-    portfolioItems = document.querySelector(".portfolio-item"),
-    popup = document.querySelector(".portfolio-popup"),
-    prevBtn = popup.querySelector(".pp-prev"),
-    nextBtn = popup.querySelector(".pp-next"),
-    closeBtn = popup.querySelector(".pp-close"),
-    projectDetailsCont = popup.querySelector(".pp-details"),
-    projectDetailsBtn = popup.querySelector(".pp-project-details-btn");
-    let itemIndex, slideIndex, screenshots;
-    
-    
-    // filter portfolio items
-    filterCont.addEventListener("click", (e) => {
-        if (e.target.classList.contains("filter-item") && 
-        !e.target.classList.contains("active")) {
-            // deactivate current active
-            filterCont.querySelector(".active").classList.remove("outer-shadow", "active");
-            // activate new filter
-            e.target.classList.add("active", "outer-shadow");
-            const target = e.target.getAttribute("data-target");
-            [portfolioItems].forEach((item) => {
-                if (target === item.getAttribute("data-category")) {
-                    item.classList.remove("hide");
-                    item.classList.add("show");
+    const filterContainer = document.querySelector(".portfolio-filter")
+    const portolioItemsCont = document.querySelector(".portfolio-items")
+    const portfolioItems = document.querySelectorAll(".portfolio-item")
+    const popup = document.querySelector(".portfolio-popup")
+    const prevBtn = popup.querySelector(".pp-prev")
+    const nextBtn = popup.querySelector(".pp-next")
+    const closeBtn = popup.querySelector(".pp-close")
+    const projectDetailsCont = popup.querySelector(".pp-details")
+    const projectDetailsBtn = popup.querySelector(".pp-project-details-btn")
+    let itemIndex, slideIndex, screenshots
+
+    // filter items
+    filterContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("filter-item") && !e.target.classList.contains("active")) {
+            // deactivate existing active filte item
+            filterContainer.querySelector(".active").classList.remove("outer-shadow", "active")
+            // activate new filter item
+            e.target.classList.add("active", "outer-shadow")
+            const target = e.target.getAttribute("data-target")
+            console.log(target);
+            portfolioItems.forEach((item) => {
+                if (target === item.getAttribute("data-category") || target === 'all') {
+                    item.classList.remove("hide")
+                    item.classList.add("show")
                 } else {
-                    item.classList.remove("show");
-                    item.classList.add("hide");
+                    item.classList.remove("show")
+                    item.classList.add("hide")
                 }
             })
         }
-    });
-})();
+    })
 
+})();
 
 // testimonial
 
