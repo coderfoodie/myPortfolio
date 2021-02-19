@@ -19,6 +19,10 @@
     });
 })();
 
+function bodyScrollingToggle() {
+    document.body.classList.toggle("stop-scrolling")
+}
+
 // services
 
 
@@ -64,12 +68,35 @@
             itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem)
             screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots")
             // convert ss to array
-
             screenshots = screenshots.split(",")
-            console.log(screenshots);
+            slideIndex = 0
+            popupToggle()
+            popupSlideshow()
         }
-
     })
+
+    closeBtn.addEventListener("click", () => {
+        popupToggle()
+    })
+
+    function popupToggle() {
+        popup.classList.toggle("open")
+        bodyScrollingToggle()
+    }
+
+    function popupSlideshow() {
+        const imgSrc = screenshots[slideIndex]
+        console.log(imgSrc);
+        const popupImg = popup.querySelector(".pp-img")
+        // activate loader untill the popupImg loaded
+        popup.querySelector(".pp-loader").classList.add("active")
+        popupImg.src=imgSrc
+        popupImg.onload = () => {
+            // deactivate loader after the popupImg loaded
+            popup.querySelector(".pp-loader").classList.remove("active")
+        }
+        popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " of " + screenshots.length
+    }
 
 })();
 
