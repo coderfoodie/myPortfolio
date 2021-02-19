@@ -62,7 +62,11 @@
             const portfolioItem = e.target.closest(".portfolio-item-inner").parentElement
             // get the portfolio item index
             itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem)
-            console.log(itemIndex);
+            screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots")
+            // convert ss to array
+
+            screenshots = screenshots.split(",")
+            console.log(screenshots);
         }
 
     })
