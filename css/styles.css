@@ -1089,6 +1089,12 @@ img {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.portfolio-popup .pp-details.active {
+  opacity: 1;
 }
 
 .portfolio-popup .pp-details-inner {

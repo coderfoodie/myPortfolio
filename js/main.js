@@ -69,9 +69,17 @@ function bodyScrollingToggle() {
             screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots")
             // convert ss to array
             screenshots = screenshots.split(",")
+            if (screenshots.length === 1) {
+                prevBtn.style.display = "none"
+                nextBtn.style.display = "none"
+            } else {
+                prevBtn.style.display = "block"
+                nextBtn.style.display = "block"
+            }
             slideIndex = 0
             popupToggle()
             popupSlideshow()
+            // popupDetails()
         }
     })
 
@@ -86,7 +94,6 @@ function bodyScrollingToggle() {
 
     function popupSlideshow() {
         const imgSrc = screenshots[slideIndex]
-        console.log(imgSrc);
         const popupImg = popup.querySelector(".pp-img")
         // activate loader untill the popupImg loaded
         popup.querySelector(".pp-loader").classList.add("active")
@@ -96,6 +103,44 @@ function bodyScrollingToggle() {
             popup.querySelector(".pp-loader").classList.remove("active")
         }
         popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " of " + screenshots.length
+    }
+    // next slide index
+    nextBtn.addEventListener("click", () => {
+        if (slideIndex ===  screenshots.length - 1) {
+            slideIndex = 0
+        } else {
+            slideIndex++
+        }
+        popupSlideshow()
+    })
+
+    // prev slide
+    prevBtn.addEventListener("click", () => {
+        if (slideIndex === 0) {
+            slideIndex + (screenshots.length - 1)
+        } else {
+            slideIndex--
+        }
+        popupSlideshow()
+    })
+
+    projectDetailsBtn.addEventListener("click", () => {
+        popupDetailsToggle()
+    })
+
+    function popupDetailsToggle() {
+        if (projectDetailsCont.classList.contains("active")) {
+            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.remove("fa-minus")
+            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.add("fa-plus")
+            projectDetailsCont.classList.remove("active")
+            projectDetailsCont.style.maxHeight = 0 + "px"
+        } else {
+            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.remove("fa-plus")
+            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.add("fa-minus")
+            projectDetailsCont.classList.add("active")
+            projectDetailsCont.style.maxHeight = projectDetailsCont.scrollHeight + "px"
+            popup.scrollTo(0, projectDetailsCont.offsetTop)
+        }
     }
 
 })();

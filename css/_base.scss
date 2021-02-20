@@ -832,7 +832,10 @@ img{vertical-align: middle;max-width: 100%;}
         max-height: 0;
         overflow: hidden;
         opacity: 0;
+        transition: all 0.5s ease;
     }
+
+    .pp-details.active{opacity: 1;}
 
     .pp-details-inner{
         padding: 30px 0;
