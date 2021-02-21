@@ -79,7 +79,7 @@ function bodyScrollingToggle() {
             slideIndex = 0
             popupToggle()
             popupSlideshow()
-            // popupDetails()
+            popupDetails()
         }
     })
 
@@ -124,19 +124,36 @@ function bodyScrollingToggle() {
         popupSlideshow()
     })
 
+    function popupDetails() {
+        // if detail does not exists
+        if (!portfolioItems[itemIndex].querySelector(".portfolio-item-details")) {
+            projectDetailsBtn.style.display = "none"
+            return //end function execution
+        } else {
+            //  get the details
+            projectDetailsBtn.style.display = "block"
+            const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML
+            popup.querySelector(".pp-project-details").innerHTML = details
+            const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML
+            popup.querySelector(".pp-title h2").innerHTML = title
+            const category =  portfolioItems[itemIndex].getAttribute("data-category")
+            console.log(category);
+        }
+    }
+
     projectDetailsBtn.addEventListener("click", () => {
         popupDetailsToggle()
     })
 
     function popupDetailsToggle() {
         if (projectDetailsCont.classList.contains("active")) {
-            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.remove("fa-minus")
-            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.add("fa-plus")
+            // projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.remove("fa-minus")
+            // projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.add("fa-plus")
             projectDetailsCont.classList.remove("active")
             projectDetailsCont.style.maxHeight = 0 + "px"
         } else {
-            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.remove("fa-plus")
-            projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.add("fa-minus")
+            // projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.remove("fa-plus")
+            // projectDetailsBtn.querySelector(".pp-project-details-btn i").classList.add("fa-minus")
             projectDetailsCont.classList.add("active")
             projectDetailsCont.style.maxHeight = projectDetailsCont.scrollHeight + "px"
             popup.scrollTo(0, projectDetailsCont.offsetTop)
