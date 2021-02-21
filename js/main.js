@@ -20,7 +20,7 @@
 })();
 
 function bodyScrollingToggle() {
-    document.body.classList.toggle("stop-scrolling")
+    document.body.classList.toggle("hidden-scrolling")
 }
 
 // services
@@ -85,6 +85,9 @@ function bodyScrollingToggle() {
 
     closeBtn.addEventListener("click", () => {
         popupToggle()
+        if (projectDetailsCont.classList.contains("active")) {
+            popupDetailsToggle()
+        }
     })
 
     function popupToggle() {
@@ -130,14 +133,16 @@ function bodyScrollingToggle() {
             projectDetailsBtn.style.display = "none"
             return //end function execution
         } else {
-            //  get the details
             projectDetailsBtn.style.display = "block"
+            // get the details
             const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML
             popup.querySelector(".pp-project-details").innerHTML = details
+            // get the project title
             const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML
             popup.querySelector(".pp-title h2").innerHTML = title
+            // get the project category
             const category =  portfolioItems[itemIndex].getAttribute("data-category")
-            console.log(category);
+            popup.querySelector(".pp-project-category").innerHTML = category.split("-").join(" ")
         }
     }
 
