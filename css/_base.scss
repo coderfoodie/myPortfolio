@@ -1060,13 +1060,13 @@ img{vertical-align: middle;max-width: 100%;}
         text-align: center;
     }
 
-    .testi-item i{
+    .testi-item svg{
         position: absolute;
         font-size: 30px;
-        color: $text-block-600;
+        g{fill: $text-block-600;}
     }
 
-    .testi-item i.left{top: 5px;left: 5px;}
+    .testi-item svg .left{top: 5px;left: 5px;}
 }
 
 // contact

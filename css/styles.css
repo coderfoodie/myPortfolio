@@ -1369,13 +1369,16 @@ img {
   text-align: center;
 }
 
-.testimonial-section .testi-item i {
+.testimonial-section .testi-item svg {
   position: absolute;
   font-size: 30px;
-  color: #666666;
 }
 
-.testimonial-section .testi-item i.left {
+.testimonial-section .testi-item svg g {
+  fill: #666666;
+}
+
+.testimonial-section .testi-item svg .left {
   top: 5px;
   left: 5px;
 }
