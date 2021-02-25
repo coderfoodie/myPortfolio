@@ -857,6 +857,7 @@ img {
 
 .services-section {
   padding: 80px 0 80px;
+  min-height: 100vh;
 }
 
 .services-section .service-item {
@@ -1347,6 +1348,64 @@ img {
 .portfolio-popup.open {
   visibility: visible;
   opacity: 1;
+}
+
+.feedback-section {
+  padding: 80px 0 80px;
+  min-height: 100vh;
+}
+
+.feedback-section .feedback-item {
+  width: 400px;
+  padding: 60px;
+  margin-top: -40px;
+  display: block;
+  text-align: center;
+}
+
+.feedback-section .feedback-item img {
+  height: 85px;
+  width: 85px;
+}
+
+.feedback-section .feedback-item p {
+  line-height: 1.5;
+}
+
+.feedback-section .customer-name {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.feedback-section .customer-rating {
+  background-color: #eee;
+  border: 3px solid #fff;
+  color: #DDD;
+  font-weight: 700;
+  border-radius: 50%;
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  line-height: 44px;
+  font-size: 15px;
+  right: 0;
+  top: 77px;
+  text-indent: -3px;
+}
+
+.feedback-section .feedback-item:after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  top: 103px;
+  background-color: #f6f6f6;
+  border: 1px solid #000;
+  border-radius: 10px;
+  z-index: -1;
 }
 
 :root {
