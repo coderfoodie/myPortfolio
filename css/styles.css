@@ -1368,6 +1368,7 @@ img {
       flex-wrap: wrap;
   position: relative;
   text-align: center;
+  margin: 10px 10px;
 }
 
 .feedback-section .feedback-item img {
@@ -1377,11 +1378,11 @@ img {
 
 .feedback-section .feedback-item p {
   line-height: 1.5;
+  margin: 15px;
 }
 
 .feedback-section .customer-name {
-  margin-top: 15px;
-  margin-bottom: 25px;
+  margin: 15px 20px;
   font-size: 20px;
   font-weight: 600;
 }
@@ -1401,13 +1402,15 @@ img {
   text-indent: -3px;
   border-radius: 50%;
   text-align: center;
+  padding-left: 10px;
 }
 
 .feedback-section .customer-rating svg {
   right: 5px;
-  width: 20px;
-  height: 20px;
-  position: absolute;
+  width: 15px;
+  height: auto;
+  position: relative;
+  top: 5px;
 }
 
 :root {

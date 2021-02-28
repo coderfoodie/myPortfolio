@@ -1056,6 +1056,7 @@ img{vertical-align: middle;max-width: 100%;}
         flex-wrap: wrap;
         position: relative;
         text-align: center;
+        margin: 10px 10px;
     }
 
     .feedback-item img{
@@ -1063,11 +1064,10 @@ img{vertical-align: middle;max-width: 100%;}
         width: 85px;
     }
 
-    .feedback-item p{line-height: 1.5;}
+    .feedback-item p{line-height: 1.5;margin: 15px;}
 
     .customer-name{
-        margin-top: 15px;
-        margin-bottom: 25px;
+        margin: 15px 20px;
         font-size: 20px;
         font-weight: 600;
     }
@@ -1087,13 +1087,15 @@ img{vertical-align: middle;max-width: 100%;}
         text-indent: -3px;
         border-radius: 50%;
         text-align: center;
+        padding-left: 10px;
     }
 
     .customer-rating svg{
         right: 5px;
-        width: 20px;
-        height: 20px;
-        position: absolute;       
+        width: 15px;
+        height: auto;
+        position: relative;
+        top: 5px;
     }
 }
 
