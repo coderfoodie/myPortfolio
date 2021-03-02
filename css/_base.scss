@@ -1086,8 +1086,9 @@ img{vertical-align: middle;max-width: 100%;}
         top: 25px;
         text-indent: -3px;
         border-radius: 50%;
-        text-align: center;
+        // text-align: center;
         padding-left: 10px;
+        text-indent: -3px;
     }
 
     .customer-rating svg{
@@ -1095,8 +1096,21 @@ img{vertical-align: middle;max-width: 100%;}
         width: 15px;
         height: auto;
         position: relative;
-        top: 5px;
+        top: 3px;
     }
+
+    .thumb-prev,
+    .thumb-next{
+	position: absolute;
+	z-index: 99;
+	top: 45%;
+	width: 98px;
+	height: 98px;
+	left: -90px;
+	cursor: pointer;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
 }
 
 

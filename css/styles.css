@@ -1401,8 +1401,8 @@ img {
   top: 25px;
   text-indent: -3px;
   border-radius: 50%;
-  text-align: center;
   padding-left: 10px;
+  text-indent: -3px;
 }
 
 .feedback-section .customer-rating svg {
@@ -1410,7 +1410,20 @@ img {
   width: 15px;
   height: auto;
   position: relative;
-  top: 5px;
+  top: 3px;
+}
+
+.feedback-section .thumb-prev,
+.feedback-section .thumb-next {
+  position: absolute;
+  z-index: 99;
+  top: 45%;
+  width: 98px;
+  height: 98px;
+  left: -90px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 :root {
